@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dusty's Portfolio</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Github">Github</a>
+            <a href="#Contact">Contact</a>
+        </nav>
+    </div>
+
+    <!--Intro section with zebra picture and brief hello-->
+
+    <div class="introduction" id="Home">
+        <div class="zebraContainer">
+            <img src="./Images/Zebras.jpg" alt="Three Zebras">
+        </div>
+
+        <div class="introText">
+            <h3>Hello, and welcome to my Portfolio!</h3>
+            <p>My name is Justin Zoland, but I go by "Dusty." I'm an aspiring Software Engineer that's currently going through a bootcamp with the Tech Academy!</p>
+            <p>Please take a look! Hopefully you will like what you see!</p>
+        </div>
+
+    </div>
+
+    <!--About Section-->
+
+    <div id="About">
+        <div class="row">
+            <div class="column">
+                <img src="./Images/ProfilePic.jpg" alt="Me and my wife" id="ProfilePic">
+                <div class="profileText">
+                    <p>A picture of me and my wife, Christine!</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="textColumn">
+                    <h3>Hello!</h3>
+                    <p>My name is Justin "Dusty" Zoland. I graduated cum laude from UCLA in 3 years. I achieved a BA in Psychology, but I've worked in a variety of fields since, including HR, payroll, and data analysis. You can find  <a href="https://www.linkedin.com/in/justindustyzoland/">my LinkedIn profile here!</a></p>
+                    <p>During the pandemic, I realized I always had a passion for coding. I decided I needed to step out of my comfort zone, which led me to the Tech Academy. The rest is history! </p>
+                    <p>Ultimately, I want to start a video game studio with my family and friends that creates games to make a difference. Our tentative name is Zebras in Chaos, explaining the picture of zebras above!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--GitHub section!-->
+
+    <div id="Github">
+        <div class="row">
+            <div class="column">
+                <div class="textColumn">
+                    <h3>Want to see more of my work?</h3>
+                    <p>Please check out <a href="https://github.com/DustyDood?tab=repositories" target="_blank">my GitHub!</a>  Inside, you'll find the various projects I've completed throughout this bootcamp, and even a few old ones!</p>
+                    <p>My personal favorite is a digital escape room I created for the cocktail hour of our wedding, which can be found <a href="https://github.com/DustyDood/WeddingRoom" target="_blank">here</a>.</p>
+                  </div>
+            </div>
+            <div class="column">
+              <a href="https://github.com/DustyDood?tab=repositories" target="_blank">
+                <img src="./Images/GitHubLogo.png" class="GitHubLink" alt="GitHub Logo">
+              </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Contact section!-->
+
+    <div id="Contact">
+      <div class="row">
+        <div class="column">
+          <div id="picturetransform"></div>
+        </div>
+        <div class="column">
+          <div class="textColumn">
+            <h3>Feel free to contact me below!</h3>
+            <div class="contactform">
+              <form action="index.html" method="post">
+                <div class="formfield">
+                  <label for="Name">Name:</label> <br />
+                  <input type="text" name="Name" value=""><br />
+                </div>
+                <div class="formfield">
+                  <label for="Email">E-mail:</label><br />
+                  <input type="text" name="Email" value=""><br />
+                </div>
+                <div class="formfield">
+                  <label for="Message">Message:</label><br />
+                  <input type="text" name="Message" value=""><br />
+                </div>
+                <div class="formfield">
+                  <input type="submit" name="" value="Submit">
+                </div>
+
+              </form>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!--Footer-->
+
+    <footer>
+      <p>Dusty Zoland | <span id="footerspan">(Soon to be)</span> Zebras in Chaos 2020&copy;</p>
+    </footer>
+
+</body>
+</html>

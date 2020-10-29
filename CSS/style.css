@@ -1,0 +1,214 @@
+
+
+body {
+    margin: 0%;
+    width: 99.86%;
+    /*This is really cheesey, but for some reason, I have a scroll bar that I can't get rid of...
+    I think a border is going past the 100% viewport. I'm using the Chrome developer tools but can't find it
+    I will e-mail Tech Academy instructors to try and find out why*/
+}
+
+/*Navbar*/
+
+.navbar {
+    position: fixed;
+    z-index: 2;
+    background-color: black;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.navbar a {
+    display: block;
+    float: left;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    transition-duration: .5s;
+}
+
+.navbar a:hover {
+    color: blue;
+    font-size: bold;
+    background-color: blanchedalmond;
+}
+
+/*Introduction Section*/
+.introduction {
+    display: block;
+    position: static;
+}
+
+.zebraContainer {
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+    display: block;
+    top: 63px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.zebraContainer img {
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.introText {
+    width: 100%;
+    padding: 20px 0px;
+    margin-top: 50%;
+    background-color: white;
+    text-align: center;
+
+    opacity: .8;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*About Section*/
+.row {
+    display: flex;
+    font-family: roboto, sans-serif;
+    position: relative;
+}
+
+.column {
+    flex: 50%;
+    height: 25em;
+    background-color: beige;
+    text-align: center;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+.textColumn {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0px 10px;
+}
+
+#ProfilePic {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profileText {
+    position: absolute;
+    z-index: 1;
+    background-color: lightblue;
+    bottom: 20px;
+    left: 25%;
+    transform: translate(-50%, 10px);
+    width: 50%;
+    opacity: .8;
+    transition-duration: .5s;
+}
+
+.profileText:hover {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*Second column section: GitHub*/
+
+.GitHubLink {
+  width: 100%;
+  height: auto;
+
+  /*Help centering the div image*/
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.GitHubLink:Hover {
+  animation-name: GitHubAnimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes GitHubAnimation {
+  0% {opacity: 100%;}
+  50% {opacity: 75%;}
+  100% {opacity: 100%;}
+
+}
+
+/*This is code borrowed to fix a Chrome issue where the navbar covers the head of the bookmark from #About.*/
+
+#About::before {
+  display: block;
+  content: " ";
+  margin-top: -60px;
+  height: 60px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*The code doesn't work for the #Head id, for some reason...*/
+
+/*Third Column Section: Contact Info*/
+
+.textColumn h3 {
+  font-family: impact, cursive;
+  font-weight: 300;
+}
+
+#picturetransform {
+  width: 50%;
+  height: 50%;
+
+  /*Help centering the div image*/
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: lightblue;
+  background-image: url("../Images/AIMIcon.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  transition-duration: .5s;
+}
+
+#picturetransform:hover {
+  background-color: coral;
+  background-image: url("../Images/GmailIcon.png");
+  width: 60%;
+  height: 60%;
+}
+
+.formfield {
+  margin-top: 10px;
+}
+
+/*Footer*/
+footer {
+  background-color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+#footerspan {
+  font-size: .75em;
+}
