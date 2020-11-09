@@ -172,8 +172,8 @@ font-weight: 300;
 }
 
 #picturetransform {
-width: 50%;
-height: 50%;
+width: 40%;
+height: 40%;
 
 /*Help centering the div image*/
 position: relative;
@@ -191,8 +191,8 @@ transition-duration: .5s;
 #picturetransform:hover {
 background-color: coral;
 background-image: url("../Images/GmailIcon.png");
-width: 60%;
-height: 60%;
+width: 50%;
+height: 50%;
 }
 
 .formfield {
