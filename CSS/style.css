@@ -81,8 +81,9 @@ body {
 /*White text bar that welcomes visitors*/
 .introText {
   width: 100%;
+  height: 175px;
   padding: 20px 0px;
-  margin-top: 50%;
+  margin-top: 40%;
   background-color: white;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -90,11 +91,22 @@ body {
   animation: introappear 2s;
   animation-delay: 2s;
   animation-fill-mode: forwards;
+  box-sizing: border-box;
 }
 
 @keyframes introappear {
   0% {opacity: 0;}
   100% {opacity: .8;}
+}
+
+.introTextPs {
+  transition: font-size 1.25s ease-out;
+}
+
+.introTextPs:hover {
+  /*Make text grow?*/
+  /*Also do button*/
+  font-size: 18px
 }
 
 /*About Section*/
@@ -122,9 +134,22 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 95%;
+  width: 100%;
+  height: 100%;
   box-sizing: border-box;
   padding: 0px 10px;
+  transition-duration: .5s;
+}
+
+.textColumn:hover {
+  background-color: lightskyblue;
+  color: orangered;
+}
+
+.textColumnCentering {
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
 }
 
 #ProfilePic {
@@ -192,38 +217,114 @@ pointer-events: none;
 /*The code doesn't work for the #Head id, for some reason...*/
 
 /*Third Column Section: Contact Info*/
-
 .textColumn h3 {
 font-family: impact, cursive;
 font-weight: 300;
 }
 
-#picturetransform {
-width: 40%;
-height: 40%;
 
-/*Help centering the div image*/
-position: relative;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-
-background-color: lightblue;
-background-image: url("../Images/AIMIcon.png");
-background-repeat: no-repeat;
-background-size: 100% 100%;
-transition-duration: .5s;
-}
-
-#picturetransform:hover {
-background-color: coral;
-background-image: url("../Images/GmailIcon.png");
-width: 50%;
-height: 50%;
-}
 
 .formfield {
 margin-top: 10px;
+padding: 5px 0px;
+}
+
+#contactform h2 {
+  font-family: 'Roboto';
+}
+
+#Contact {
+  position: fixed;
+  right: 5%;
+  bottom: 2.5%;
+  z-index: 10;
+  width: 200px;
+  height: 75px;
+  opacity: 0;
+  animation: contactAppear 1s ease-in 3s forwards;
+  background-color: lightblue;
+  color: maroon;
+  font-family: "Oswald";
+  font-weight: bolder;
+  transition-duration: .5s;
+}
+
+@keyframes contactAppear {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#Contact:hover {
+  cursor: pointer;
+  color: saddlebrown;
+  background-color: lightgreen;
+}
+
+/*Updating the contact Button*/
+#contactform {
+  display: none;
+  position: fixed;
+  z-index: 11;
+  right: 5%;
+  bottom: 2.5%;
+  width: 35vw;
+  /*height: 25vw;*/
+  text-align: center;
+  background-color:blanchedalmond;
+  border: 2px solid black;
+}
+
+#contactform label {
+  font-weight: bold;
+  color: red;
+  font-size: 20px;
+}
+
+.rexrex {
+  text-align: left;
+}
+
+#contactform input {
+  text-align: left;
+  background-color: aliceblue;
+  width: 95%;
+  padding: 5px;
+}
+
+.buttons {
+  text-align: center;
+  width: 95%;
+  margin: 5px 0px;
+  cursor: pointer;
+  height: 50px;
+  font-size: 24px;
+}
+
+.submitButton {
+  background-color: lightblue;
+  color: maroon;
+  font-family: "Oswald";
+  font-weight: bolder;
+  transition-duration: .5s;
+}
+
+.submitButton:hover {
+  color: saddlebrown;
+  background-color: lightgreen;
+}
+
+.cancelButton {
+  color: wheat;
+  background-color: black;
+  font-family: "Oswald";
+  font-weight: bolder;
+  transition-duration: .5s;
+}
+
+.cancelButton:hover {
+  color: black;
+  background-color: red;
+
 }
 
 /*Footer*/

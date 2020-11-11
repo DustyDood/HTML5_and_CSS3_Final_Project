@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <script src="./JS/final.js" defer></script>
 </head>
 <body>
     <div class="navbar">
@@ -15,7 +17,7 @@
             <a href="#Home">Home</a>
             <a href="#About">About</a>
             <a href="#Github">Github</a>
-            <a href="#Contact">Contact</a>
+            <a href="#Contact" onclick="bothWaysSesame()">Contact</a>
         </nav>
     </div>
 
@@ -31,9 +33,47 @@
 
         <div class="introText">
             <h3>Hello, and welcome to my Portfolio!</h3>
-            <p>My name is Justin Zoland, but I go by "Dusty." I'm an aspiring Software Engineer that's currently going through a bootcamp with the Tech Academy!</p>
-            <p>Please take a look! Hopefully you will like what you see!</p>
+            <div class="introTextPs">
+              <p>My name is Justin Zoland, but I go by "Dusty." I'm an aspiring Software Engineer that's currently going through a bootcamp with the Tech Academy!</p>
+              <p>Please take a look! Hopefully you will like what you see!</p>  
+            </div>
         </div>
+    </div>
+
+    <!--Slideshow Section-->
+
+    <div id="Slideshow">
+      <div id="Slideshow_Background">
+        <div id="Slideshow_Container">
+
+          <div class="mySlides fade">
+            <div class="Slide_Number">1 / 4</div>
+            <img class="Slide_Show_Images" src="./Images/HTML_CSS_and_JavaScript.jpeg" alt="HTML, CSS, and JS">
+            <div class="text">I have experience with a variety of languages, including HTML, CSS, and JS!</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="Slide_Number">2 / 4</div>
+            <img class="Slide_Show_Images" src="./Images/Python.png" alt="HTML, CSS, and JS">
+            <div class="text">I also have experience in Python!</div>
+          </div>
+
+          
+          <div class="mySlides fade">
+            <div class="Slide_Number">3 / 4</div>
+            <img class="Slide_Show_Images" src="./Images/C_Sharp_and_Dot_NET.png" alt="HTML, CSS, and JS">
+            <div class="text">I also have experience in Python!</div>
+          </div>
+
+          
+          <div class="mySlides fade">
+            <div class="Slide_Number">4 / 4</div>
+            <img class="Slide_Show_Images" src="./Images/SQL_and_Database.jpg" alt="HTML, CSS, and JS">
+            <div class="text">Last but not least, I have experience with back end development, including databases and SQL!</div>
+          </div>
+
+        </div>
+      </div>
 
     </div>
 
@@ -49,10 +89,12 @@
             </div>
             <div class="column">
                 <div class="textColumn">
+                  <div class="textColumnCentering">
                     <h3>Hello!</h3>
                     <p>My name is Justin "Dusty" Zoland. I graduated cum laude from UCLA in 3 years. I achieved a BA in Psychology, but I've worked in a variety of fields since, including HR, payroll, and data analysis. You can find  <a href="https://www.linkedin.com/in/justindustyzoland/">my LinkedIn profile here!</a></p>
                     <p>During the pandemic, I realized I always had a passion for coding. I decided I needed to step out of my comfort zone, which led me to the Tech Academy. The rest is history! </p>
                     <p>Ultimately, I want to start a video game studio with my family and friends that creates games to make a difference. Our tentative name is Zebras in Chaos, explaining the picture of zebras above!</p>
+                  </div>
                 </div>
             </div>
         </div>
@@ -64,10 +106,12 @@
         <div class="row">
             <div class="column">
                 <div class="textColumn">
+                  <div class="textColumnCentering">
                     <h3>Want to see more of my work?</h3>
                     <p>Please check out <a href="https://github.com/DustyDood?tab=repositories" target="_blank">my GitHub!</a>  Inside, you'll find the various projects I've completed throughout this bootcamp, and even a few old ones!</p>
                     <p>My personal favorite is a digital escape room I created for the cocktail hour of our wedding, which can be found <a href="https://github.com/DustyDood/WeddingRoom" target="_blank">here</a>.</p>
                   </div>
+                </div>
             </div>
             <div class="column">
               <a href="https://github.com/DustyDood?tab=repositories" target="_blank">
@@ -78,41 +122,28 @@
     </div>
 
     <!--Contact section!-->
-
-    <div id="Contact">
-      <div class="row">
-        <div class="column">
-          <div id="picturetransform"></div>
+    <button onclick="openSesame()" id="Contact">Contact me!</button>
+    <div id="contactform">
+      <form name="formform" onsubmit="return validationStation()">
+        <h2>Conctact Form</h2>
+        <p>Send me a message and I shall respond within 24 hours!</p>
+        <div class="formfield">
+          <label for="Name" class="rexrex">Name:</label> <br />
+          <input type="text" name="Name" value="" placeholder="Please enter your name here"><br />
         </div>
-        <div class="column">
-          <div class="textColumn">
-            <h3>Feel free to contact me below!</h3>
-            <div class="contactform">
-              <form action="index.html" method="post">
-                <div class="formfield">
-                  <label for="Name">Name:</label> <br />
-                  <input type="text" name="Name" value=""><br />
-                </div>
-                <div class="formfield">
-                  <label for="Email">E-mail:</label><br />
-                  <input type="text" name="Email" value=""><br />
-                </div>
-                <div class="formfield">
-                  <label for="Message">Message:</label><br />
-                  <input type="text" name="Message" value=""><br />
-                </div>
-                <div class="formfield">
-                  <input type="submit" name="" value="Submit">
-                </div>
-
-              </form>
-            </div>
-
-          </div>
+        <div class="formfield">
+          <label for="Email" class="rexrex">E-mail:</label><br />
+          <input type="text" name="Email" value="" placeholder="Please enter your e-mail here"><br />
         </div>
-
-      </div>
-
+        <div class="formfield">
+          <label for="Message" class="rexrex">Message:</label><br />
+          <input type="text" name="Message" value="" placeholder="Please enter your message here"><br />
+        </div>
+        <div class="formfield">
+          <button type="submit" class="buttons submitButton">Submit</button>
+          <button type="button" class="buttons cancelButton"onclick="closeSesame()">Cancel</button>
+        </div>
+      </form>
     </div>
 
     <!--Footer-->
