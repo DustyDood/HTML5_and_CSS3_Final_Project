@@ -228,6 +228,11 @@ pointer-events: none;
     transform: translate(-50%, -50%);
 }
 
+.noStretch {
+  max-width: 400px;
+  margin-right: 50%;
+}
+
 /*Third Column Section: Contact Info*/
 .textColumn h3 {
 font-family: impact, cursive;
@@ -470,4 +475,3 @@ font-size: .75em;
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
