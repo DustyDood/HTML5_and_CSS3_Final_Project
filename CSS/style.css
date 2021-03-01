@@ -1,9 +1,5 @@
 body {
     margin: 0;
-
-  /*This is really cheesey, but for some reason, I have a scroll bar that I can't get rid of...
-  I think a border is going past the 100% viewport. I'm using the Chrome developer tools but can't find it
-  I will e-mail Tech Academy instructors to try and find out why*/
 }
 
 /*Navbar*/
@@ -144,6 +140,7 @@ body {
 .textColumn:hover {
   background-color: lightskyblue;
   color: orangered;
+  border-radius: 10px;
 }
 
 .textColumnCentering {
@@ -168,6 +165,7 @@ body {
   width: 100%;
   opacity: .8;
   transition-duration: .5s;
+  border-radius: 10px;
 }
 
 .profileText:hover {
@@ -226,6 +224,7 @@ pointer-events: none;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 10px;
 }
 
 .noStretch {
