@@ -179,7 +179,7 @@
   <!--Contact section!-->
   <button onclick="openSesame()" id="Contact">Contact me!</button>
   <div id="contactform">
-    <form name="formform" action="https://formspree.io/f/maylgaog" method="POST">
+    <form name="formform" id="ContactSubmit" action="https://formspree.io/f/maylgaog" method="POST">
       <h2>Conctact Form</h2>
       <p>Send me a message and I shall respond within 24 working hours!</p>
       <div class="formfield">
@@ -198,7 +198,7 @@
       </div>
       <input type="hidden" name="_subject" value="Portfolio Site Response" />
       <div class="formfield">
-        <button type="submit" class="buttons cancelButton">Submit</button>
+        <button type="button" class="buttons cancelButton" onclick="validationStation()">Submit</button>
         <button type="button" class="buttons cancelButton" onclick="closeSesame()">Cancel</button>
       </div>
     </form>
