@@ -17,7 +17,7 @@
       <a href="#Home">Home</a>
       <a href="#About">About</a>
       <a href="#Github">Github</a>
-      <!--<a href="#Contact" onclick="bothWaysSesame()">Contact</a>-->
+      <a href="#Contact" onclick="bothWaysSesame()">Contact</a>
     </nav>
   </div>
 
@@ -104,7 +104,7 @@
             <h3>Hello!</h3>
             <p>My name is Justin "Dusty" Zoland. I graduated cum laude from UCLA in 3 years. I achieved a BA in Psychology, but I've worked in a variety of fields since, including HR, payroll, and data analysis. You can find  <a href="https://www.linkedin.com/in/justindustyzoland/">my LinkedIn profile here!</a></p>
             <p>During the pandemic, I realized I always had a passion for coding. I decided I needed to step out of my comfort zone, which led me to the Tech Academy. The rest is history! </p>
-            <p>Ultimately, I want to start a video game studio with my family and friends that creates games to make a difference. Our tentative name is Zebras in Chaos, explaining the picture of zebras above!</p>
+            <p>My dream is to start a video game studio with my family and friends that creates games to make a difference. Our tentative name is Zebras in Chaos, explaining the picture of zebras above!</p>
           </div>
         </div>
       </div>
@@ -176,31 +176,34 @@
   </div>
 
 
-  <!--Contact section!
+  <!--Contact section!-->
   <button onclick="openSesame()" id="Contact">Contact me!</button>
   <div id="contactform">
-    <form name="formform" onsubmit="return validationStation()">
+    <form name="formform" action="https://formspree.io/f/maylgaog" method="POST">
       <h2>Conctact Form</h2>
-      <p>Send me a message and I shall respond within 24 hours!</p>
+      <p>Send me a message and I shall respond within 24 working hours!</p>
       <div class="formfield">
         <label for="Name" class="rexrex">Name:</label> <br />
         <input type="text" name="Name" value="" placeholder="Please enter your name here"><br />
       </div>
       <div class="formfield">
-        <label for="Email" class="rexrex">E-mail:</label><br />
-        <input type="text" name="Email" value="" placeholder="Please enter your e-mail here"><br />
+        <label for="Email" class="rexrex">E-mail:<br />
+          <input type="text" name="_replyto" value="" placeholder="Please enter your e-mail here"><br />
+        </label>
       </div>
       <div class="formfield">
-        <label for="Message" class="rexrex">Message:</label><br />
-        <input type="text" name="Message" value="" placeholder="Please enter your message here"><br />
+        <label for="Message" class="rexrex">Message:<br />
+          <input type="text" name="Message" value="" placeholder="Please enter your message here"><br />
+        </label>
       </div>
+      <input type="hidden" name="_subject" value="Portfolio Site Response" />
       <div class="formfield">
-        <button type="submit" class="buttons submitButton">Submit</button>
+        <button type="submit" class="buttons cancelButton">Submit</button>
         <button type="button" class="buttons cancelButton" onclick="closeSesame()">Cancel</button>
       </div>
     </form>
   </div>
-  -->
+
 
   <!--Footer-->
 
